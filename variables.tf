@@ -1,6 +1,6 @@
 variable "destination_org" {
   description = "The name of the organization in Github that will contain the templated repo."
-  default     = "hashicorp-education"
+  default     = "plaroche1978"
 }
 
 variable "gh_token" {
@@ -19,14 +19,15 @@ variable "waypoint_application" {
 
 variable "domain" {
   description = "The top level domain name used for redirects."
-  default     = "hathatgames.com"
+  default     = "waypoint.automation-blog.ca"
 }
 
 variable "aws_region" {
   description = "The AWS region to contain resources."
-  default     = "us-east-1"
+  default     = "ca-central-1"
 }
 
 variable "route53_zone_id" {
   description = "The premade route53 zone ID. The zone is created outside of here so that the domain config can be set up beforehand."
+  sensitive = true
 }
